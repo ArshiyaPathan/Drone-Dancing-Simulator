@@ -30,7 +30,7 @@ Enter New Cooridnate[x, y, z] >
 
 #### 1. Membership
 
-When a drone joins to the server, the server will response an unique client/drone id and a coordinate to be moved.
+When a drone joins to the server, the server sends a response with an unique client/drone id and a coordinate to be moved.
 
 > python3 client.py {server_port}
 
@@ -55,8 +55,8 @@ Client id [xxxx] connected to the server.
 
 #### 2. Getting user inputs and forwarding to drones
 
-When user enters a new coordinate in the server window, the server will forward new coordinates to all drones. You need to support for two drones in this assignment. Then, each client window will be prompted with new coordinate.
+When user enters a new coordinate in the server window, the server forward new coordinates to all drones. Any number of drones can be supported. Then, each client window will be prompted with new coordinate.
 
 ### Client
 
-Each drone will act as a client which will be listening new coordinates from the server. The server to client communication is one-way (GRPC) streaming and the client will never send any messages back to the server.
+Each drone acts as a client which is listening new coordinates from the server. The server to client communication is one-way (GRPC) streaming and the client never sends any messages back to the server.
